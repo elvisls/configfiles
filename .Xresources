@@ -1,0 +1,47 @@
+!! urxvt settings
+URxvt.scrollBar:	false
+URxvt.font:		xft:DejaVu Sans Mono:size=10
+
+!transparency
+!URxvt*inheritPixmap: true
+!URxvt*.transparent: true
+! URxvt*.shading: 0 to 99 darkens, 101 to 200 lightens
+!URxvt*.shading: 45
+
+!colors
+! special
+*.foreground:   #93a1a1
+*.background:   #002b36
+*.cursorColor:  #93a1a1
+
+! black
+*.color0:       #002b36
+*.color8:       #657b83
+
+! red
+*.color1:       #dc322f
+*.color9:       #dc322f
+
+! green
+*.color2:       #2aa198
+*.color10:      #2aa198
+
+! yellow
+*.color3:       #586e75
+*.color11:      #586e75
+
+! blue
+*.color4:       #268bd2
+*.color12:      #268bd2
+
+! magenta
+*.color5:       #839496
+*.color13:      #839496
+
+! cyan
+*.color6:       #93a1a1
+*.color14:      #93a1a1
+
+! white
+*.color7:       #fdf6e3
+*.color15:      #fdf6e3

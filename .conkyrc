@@ -1,0 +1,33 @@
+out_to_x no
+own_window no
+out_to_console yes
+background no
+max_text_width 0
+
+#update interval
+update_interval 2.0
+
+#number of times conky will update before quitting
+#0 = forever
+
+total_run_times 0
+
+short_units yes
+
+use_spacer left
+
+override_utf_locale no
+
+cpu_avg_samples 2
+
+TEXT
+
+#JSON for i3bar
+
+#HDD %free, RAM %used, Battery %free
+[
+  { "full_text" : "HDD ${fs_free /} Free RAM ${memperc}% },
+ #{ "full_text" : "Battery ${battery_percent BAT0}%" },
+#Date and Time
+ { "full_text" : "${time %a} ${time %e %B %G} ${time %I:%M}" }
+],

@@ -1,0 +1,83 @@
+#exec feh --bg-fill 
+
+set $mod Mod4
+
+font pango:DejaVu Sans Mono 8
+
+floating_modifier $mod
+
+bindsym $mod+Return exec urxvt
+
+bindsym $mod+Shift+q kill
+
+bindsym $mod+d exec dmenu_run -nb "#002b36" -nf "#657b83" -sb "#dc322f" -sf "#fdf6e3" -fn "DejaVu Sans Mono-10"
+
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+bindsym $mod+b split h
+
+bindsym $mod+v split v
+
+bindsym $mod+f fullscreen toggle
+
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+bindsym $mod+Shift+c reload
+
+bindsym $mod+Shift+r restart
+
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+#colors					border  bg      text    indicator
+client.focused				#ca005d #ca005d #fdf6e3 #ca005d
+client.unfocused			#000000 #000000 #fdf6e3 #586e75
+client.focused_inactive			#073642 #073642 #eee8d5 #eee8d5
+client.urgent				#dc322f #dc322f #fdf6e3 #dc322f
+
+bar {
+        status_command ~/scripts/conky-i3bar.sh
+	colors {
+		background		#000000
+		statusline		#eee8d5
+		separator		#eee8d5
+		focused_workspace	#ca005d #ca005d #eee8d5 
+		active_workspace	#ff0066 #ff0066 #eee8d5
+		inactive_workspace	#93a1a1 #93a1a1 #000914
+		urgent_workspace	#ff0066 #ff0066 #eee8d5
+	}
+}
+
+hide_edge_borders none
+new_window pixel
