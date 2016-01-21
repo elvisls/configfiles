@@ -8,7 +8,7 @@ bindsym $mod+Return exec rxvt
 
 bindsym $mod+Shift+q kill
 
-bindsym $mod+d exec dmenu_run -nb "#002b36" -nf "#657b83" -sb "#dc322f" -sf "#fdf6e3" -fn "Dejavu Sans Mono-10"
+bindsym $mod+d exec dmenu_run -nb "#002b36" -nf "#657b83" -sb "#dc322f" -sf "#fdf6e3" -fn "Dejavu Sans Mono-10.5"
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down

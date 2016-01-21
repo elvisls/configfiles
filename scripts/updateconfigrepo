@@ -1,0 +1,8 @@
+#!/bin/sh
+
+cp -r ~/.i3 ~/configfiles
+cp    ~/.conkyrc ~/configfiles
+cp -r ~/scripts/ ~/configfiles
+cp    ~/.vimrc ~/configfiles
+cp    ~/.xinitrc ~/configfiles
+cp    ~/.Xresources ~/configfiles

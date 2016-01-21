@@ -4,17 +4,11 @@ if [[ `/sbin/iwconfig wlan0 | sed -e '/ESSID/!d' -e 's/.*ESSID:"/"/' -e 's/\"//g
 
 	export ssid=`/sbin/iwconfig wlan0 | sed -e '/ESSID/!d' -e 's/.*ESSID:"/"/' -e 's/\"//g'`
 
-	echo "ssid:" $ssid
-
-	if [ `echo $ssid | grep -ic ssidGoesHere` -eq 1 ] ; then
+	if [ `echo $ssid | grep -ic ssid` -eq 1 ] ; then
 		http_proxy="http://proxy:port"
 		https_proxy=$http_proxy
 		HTTP_PROXY=$http_proxy
 		HTTPS_PROXY=$http_proxy
-	fi
-
-	if [ -v http_proxy ]; then
-		echo "proxy:" $http_proxy
 	fi
 
 	alias sudo='sudo env http_proxy=$http_proxy https_proxy=$https_proxy HTTP_PROXY=$HTTP_PROXY HTTPS_PROXY=$HTTPS_PROXY'

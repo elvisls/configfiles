@@ -24,10 +24,13 @@ TEXT
 
 #JSON for i3bar
 
-#HDD %free, RAM %used, Battery %free
+#HDD %free, RAM %used
 [
-  { "full_text" : "HDD ${fs_free /} Free RAM ${memperc}% },
- #{ "full_text" : "Battery ${battery_percent BAT0}%" },
-#Date and Time
- { "full_text" : "${time %a} ${time %e %B %G} ${time %I:%M}" }
+#  { "full_text" : "HDD ${fs_free /} Free RAM ${memperc}%" },
+#Battery1 %free
+#  { "full_text" : "Battery ${battery_percent BAT0}%" },
+#Date
+ { "full_text" : "${time %a} ${time %e %B %G}" },
+#Time
+ { "full_text" : "${time %I:%M}" }
 ],
